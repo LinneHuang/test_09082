@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello world!</title>
+    <meta name="description" content="Hello world!">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  </head>
+  <body>
+<a-scene name="KanauScene">
+  <a-assets>
+    <a-asset-item id="Cube-obj" src="./models/Cube.obj"></a-asset-item>
+    <a-asset-item id="Cube-mtl" src="./models/Cube.mtl"></a-asset-item>
+  </a-assets>
+  <a-sky radius="5000" color="#314D79"></a-sky>
+  <a-entity name="Main Camera" tag="MainCamera">
+    <a-camera far="1000" near="0.3" look-controls-enabled="true" wasd-controls-enabled="true">
+      <a-cursor fuse="False" max-distance="1000" timeout="1500"></a-cursor>
+    </a-camera>
+  </a-entity>
+  <a-light position="0 3 0" rotation="-50 -330 1.328236E-06" name="Directional Light" type="directional" color="#FFF4D6"></a-light>
+  <a-entity position="0 0 -5" rotation="-45.00001 -45 45" name="Cube" obj-model="obj: #Cube-obj; "></a-entity>
+  <a-entity position="4 0 -5" rotation="-45.00001 -45 45" name="Cube (1)" obj-model="obj: #Cube-obj; "></a-entity>
+  <a-entity position="-4 0 -5" rotation="-45.00001 -45 45" name="Cube (2)" obj-model="obj: #Cube-obj; "></a-entity>
+  <a-light name="AmbientLight" type="ambient" color="#363942"></a-light>
+</a-scene>
+</body>
+</html>
